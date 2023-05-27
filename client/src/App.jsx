@@ -3,7 +3,7 @@ import "./index.css";
 import { Route, Routes } from 'react-router-dom';
 
 import { Sidebar, Navbar } from './components';
-//import { CampaignDetails, CreateCampaign, Home, Profile } from './pages';
+import { CampaignDetails, CreateCampaign, Home, Profile } from './pages';
 
 const App = () => {
   return (
@@ -17,7 +17,9 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-         
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/create-campaign" element={<CreateCampaign />} />
+          <Route path="/campaign-details/:id" element={<CampaignDetails />} />
         </Routes>
       </div>
     </div>
@@ -25,7 +27,3 @@ const App = () => {
 }
 
 export default App;
-
-// <Route path="/profile" element={<Profile />} />
-//<Route path="/create-campaign" element={<CreateCampaign />} />
-//<Route path="/campaign-details/:id" element={<CampaignDetails />} />
