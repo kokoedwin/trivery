@@ -1,4 +1,3 @@
-
 import React, { useContext, createContext } from 'react';
 
 import { useAddress, useContract, useMetamask, useContractWrite } from '@thirdweb-dev/react';
@@ -8,7 +7,7 @@ import { EditionMetadataWithOwnerOutputSchema } from '@thirdweb-dev/sdk';
 const StateContext = createContext();
 
 export const StateContextProvider = ({ children }) => {
-  const { contract } = useContract('0xf59A1f8251864e1c5a6bD64020e3569be27e6AA9');
+  const { contract } = useContract('0xEfb608481b50a9f7d7a41Df437d5B916282301Ad');
   const { mutateAsync: createCampaign } = useContractWrite(contract, 'createCampaign');
 
   const address = useAddress();
@@ -98,4 +97,3 @@ export const StateContextProvider = ({ children }) => {
 }
 
 export const useStateContext = () => useContext(StateContext);
-
